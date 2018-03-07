@@ -15,12 +15,10 @@ import {
 export default class App extends Component {
   render() {
     return (
-      <View style={{ backgroundColor: 'green', flex: 1 }}>
-
-        <View style={{ backgroundColor: 'red', flex: 2 }} />
+      <View style={{ flex: 1 }}>
+        <View style={{ backgroundColor: 'green', flex: 1 }} />
+        <View style={{ backgroundColor: 'red', flex: 2 }}/>
         <View style={{ backgroundColor: 'yellow', flex: 1 }} />
-        <View style={{ backgroundColor: 'blue', flex: 5 }} />
-
       </View>
     )
 
