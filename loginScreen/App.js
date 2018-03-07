@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
   Platform,
+  TouchableOpacity,
   StyleSheet,
   Text,
   View,
@@ -36,6 +37,23 @@ export default class App extends Component {
 
         {/* button */}
         <View style={{ flex: 2, backgroundColor: 'green' }}>
+          
+          <TouchableOpacity style={{ 
+            alignSelf: 'center',
+            borderRadius: 5,
+            backgroundColor: 'white', 
+            width: '92%' }} >
+            
+            <Text style={{
+              margin: 15,
+              fontSize: 15, 
+              color: 'red', 
+              textAlign: 'center' }}>
+              Continue with Google
+            </Text>
+            
+          </TouchableOpacity>
+          
         </View>
 
       </View>
