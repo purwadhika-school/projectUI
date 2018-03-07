@@ -44,14 +44,22 @@ export default class App extends Component {
             backgroundColor: 'white', 
             width: '92%' }} >
             
-            <Text style={{
-              margin: 15,
-              fontSize: 15, 
-              color: 'red', 
-              textAlign: 'center' }}>
-              Continue with Google
-            </Text>
-            
+            <View style={{ flexDirection: 'row' }}>
+              <View style={{ width: '30%' }}>
+                <Image 
+                  style={{ margin: 15, width: 25, height: 25, resizeMode: 'contain' }}
+                  source={require('./assets/g_icon.png')} />
+              </View>
+              <View style={{ width: '70%' }}>
+                <Text style={{
+                  margin: 15,
+                  fontSize: 15, 
+                  color: 'red' }}>
+                  Continue with Google
+                </Text>
+              </View>
+            </View>
+
           </TouchableOpacity>
           
         </View>
