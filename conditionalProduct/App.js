@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Image, Text, View } from "react-native";
 import OriginalPrice from "./src/harga_asli";
+import HargaDiskon from './src/harga_diskon'
 
 export default class App extends Component {
   constructor(props) {
@@ -30,10 +31,15 @@ export default class App extends Component {
               fontWeight: "500"
             }}
           >
-            Nike Mercurial Superfly
+            {this.state.dataProduct.nama_product}
           </Text>
-          
-          <OriginalPrice />
+
+          {this.state.dataProduct.harga_asli && (
+            <OriginalPrice price_ori={this.state.dataProduct.harga_asli} />
+          )}
+          {this.state.dataProduct.harga_diskon && (
+            <HargaDiskon price_disc={this.state.dataProduct.harga_diskon} />
+          )}
         </View>
       </View>
     );

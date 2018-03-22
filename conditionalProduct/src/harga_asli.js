@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
 
-const OriginalPrice = price => {
+const OriginalPrice = data => {
   return (
     <Text
       style={{
@@ -9,7 +9,7 @@ const OriginalPrice = price => {
         textDecorationLine: "line-through"
       }}
     >
-      Rp. 750,000
+      {data.price_ori}
     </Text>
   );
 };
