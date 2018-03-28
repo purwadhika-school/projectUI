@@ -3,11 +3,34 @@ import { View, Text, ActivityIndicator, Button, Image } from "react-native";
 
 // component ada 2 jenis (class based component)
 class Header extends Component {
-  // // method yg akan dijalankan terlebih dahulu
-  // constructor(){}
+  // method yg akan dijalankan terlebih dahulu
+  constructor() {
+    super();
+    console.log("hallo");
+    // const name = "Yogie";
+    // console.log(name)
 
-  // // lifecycle
-  // componentDidMount(){}
+    // state
+    this.state = {
+        gender: 'male'
+    }
+  }
+
+  // lifecycle
+  componentDidMount() {
+    console.log("line ini dijalankan setelah komponennya tampil");
+    console.log(this.props.phone, this.props.city)
+    console.log(1 + 1)
+    console.log(this.state.gender)
+    this.setState({
+        gender: 'female'
+    })
+  }
+
+  // Props
+
+  // State
+
 
   // method wajib
   render() {
@@ -42,7 +65,8 @@ class Header extends Component {
               marginTop: 10
             }}
           >
-            Welcome to Todoist
+            {/* Props */}
+            {this.props.phone} {this.props.city} {this.state.gender}
           </Text>
           <Text
             style={{

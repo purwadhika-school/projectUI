@@ -62,12 +62,12 @@ export default class App extends Component {
                 {data.nama_product}
               </Text>
               
-              {data.harga_asli !== "" && (
+              {/* {data.harga_asli !== "" && (
                 <OriginalPrice price_ori={data.harga_asli} />
               )}
               {data.harga_diskon !== "" && (
                 <HargaDiskon price_disc={data.harga_diskon} />
-              )}
+              )} */}
             </View>
           ))}
         </View>

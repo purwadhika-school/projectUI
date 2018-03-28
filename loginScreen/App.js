@@ -15,7 +15,11 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: 'red' }}>
-        <Header />
+        <Header 
+          isMale={true}
+          no={51}
+          phone='081290409883'
+          city='Jakarta' />
         <Body />
       </View>
     )
