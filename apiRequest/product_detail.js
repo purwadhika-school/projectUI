@@ -7,25 +7,8 @@ class ProductDetail extends Component {
     super(props);
 
     this.state = {
-      data_product: []
+      data_product: [],
     };
-  }
-
-  render() {
-    const { data_product } = this.state;
-    return data_product.length > 0 ? (
-      <View>
-        <Image
-          style={{ width: 200, height: 200, resizeMode: "contain" }}
-          source={{ uri: data_product[0].image }}
-        />
-        <Text>{data_product[0].product_name}</Text>
-        <Text>{data_product[0].price}</Text>
-        <Text>{data_product[0].description}</Text>
-      </View>
-    ) : (
-      <ActivityIndicator size="large" />
-    );
   }
 
   componentDidMount() {
@@ -46,8 +29,22 @@ class ProductDetail extends Component {
       });
   };
 
-
-
+  render() {
+    const { data_product } = this.state; // destructuring
+    return data_product.length > 0 ? (
+      <View>
+        <Image
+          style={{ width: 200, height: 200, resizeMode: "contain" }}
+          source={{ uri: data_product[0].image }}
+        />
+        <Text>{data_product[0].product_name}</Text>
+        <Text>{data_product[0].price}</Text>
+        <Text>{data_product[0].description}</Text>
+      </View>
+    ) : (
+      <ActivityIndicator size="large" />
+    );
+  }
 }
 
 export default ProductDetail;
