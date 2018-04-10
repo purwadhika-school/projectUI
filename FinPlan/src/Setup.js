@@ -11,10 +11,11 @@ import { fetchData } from "./actions";
 import Login from './screens/login'
 import Register from './screens/register'
 import Home from './screens/home'
+import IncomeList from './screens/income_list'
 
 class Setup extends Component {
   render() {
-    return <Home />
+    return <IncomeList />
   }
 }
 
