@@ -16,7 +16,7 @@ class Login extends Component {
         >
           <TextInput
             underlineColorAndroid="rgba(0,0,0,0)"
-            style={{ fontSize: 20, width: "70%" }}
+            style={{ fontSize: 20, width: "70%", marginLeft: 10 }}
             placeholder="Email"
           />
         </View>
@@ -31,7 +31,7 @@ class Login extends Component {
         >
           <TextInput
             underlineColorAndroid="rgba(0,0,0,0)"
-            style={{ fontSize: 20 }}
+            style={{ fontSize: 20, marginLeft: 10 }}
             placeholder="Password"
           />
         </View>
