@@ -10,10 +10,11 @@ import { connect } from "react-redux";
 import { fetchData } from "./actions";
 import Login from './screens/login'
 import Register from './screens/register'
+import Home from './screens/home'
 
 class Setup extends Component {
   render() {
-    return <Register />
+    return <Home />
   }
 }
 
