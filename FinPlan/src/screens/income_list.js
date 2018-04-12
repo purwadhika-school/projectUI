@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, FlatList, Text, TouchableOpacity } from "react-native";
+import numeral from "numeral";
 
 class IncomeList extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class IncomeList extends Component {
   }
 
   renderBody(item_saya) {
+    const amount_formatted = numeral(item_saya.item.amount).format("0,0");
     return (
       <View
         style={{
@@ -59,7 +61,7 @@ class IncomeList extends Component {
           </View>
         </View>
         <Text style={{ fontSize: 40, fontWeight: "600", marginLeft: 20 }}>
-          IDR {item_saya.item.amount}
+          IDR {amount_formatted}
         </Text>
         <Text style={{ fontSize: 15, marginLeft: 20, marginBottom: 20 }}>
           from <Text style={{ fontWeight: "700" }}>{item_saya.item.from}</Text>
