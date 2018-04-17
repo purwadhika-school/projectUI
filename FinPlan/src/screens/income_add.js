@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
+import numeral from "numeral";
 
 class IncomeAdd extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selectedBtn: ""
+      selectedBtn: "",
+      amountFormatted: "0"
     };
   }
 
@@ -91,6 +93,12 @@ class IncomeAdd extends Component {
           }}
         >
           <TextInput
+            onSubmitEditing={event => console.log(event.nativeEvent.text)
+            //   this.setState({
+            //     amountFormatted: numeral(event.nativeEvent.text).format("0,0")
+            //   })
+            }
+            // value={this.state.amountFormatted}
             keyboardType="numeric"
             underlineColorAndroid="rgba(0,0,0,0)"
             style={{ fontSize: 20, width: "70%", marginLeft: 20 }}
