@@ -3,6 +3,7 @@ import { View, Image, Text, TextInput, TouchableOpacity } from "react-native";
 
 class Login extends Component {
   render() {
+    console.log(this.props)
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <View
@@ -58,6 +59,7 @@ class Login extends Component {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("RegisterPage")}
             style={{
               width: "30%",
               borderColor: "#F1F1F1",

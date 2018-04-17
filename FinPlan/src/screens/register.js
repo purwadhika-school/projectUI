@@ -59,6 +59,7 @@ class Register extends Component {
           }}
         >
           <TouchableOpacity
+            onPress={() => this.props.navigation.goBack()}
             style={{
               width: "30%",
               borderColor: "#F1F1F1",
