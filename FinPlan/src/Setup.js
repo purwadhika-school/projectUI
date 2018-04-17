@@ -26,13 +26,28 @@ class Setup extends Component {
 const RootStack = StackNavigator(
   {
     LoginPage: {
-      screen: Setup
+      screen: Setup,
+      headerMode: "none",
+      header: null,
+      navigationOptions: {
+        header: null
+      }
     },
     RegisterPage: {
-      screen: Register
+      screen: Register,
+      headerMode: "none",
+      header: null,
+      navigationOptions: {
+        header: null
+      }
     },
     HomePage: {
-      screen: Home
+      screen: Home,
+      headerMode: "none",
+      header: null,
+      navigationOptions: {
+        header: null
+      }
     },
     IncomeListPage: {
       screen: IncomeList
