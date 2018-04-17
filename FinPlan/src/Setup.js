@@ -14,10 +14,11 @@ import Home from "./screens/home";
 import IncomeList from "./screens/income_list";
 import IncomeAdd from "./screens/income_add";
 import ExpenseList from "./screens/expense_list";
+import ExpenseAdd from "./screens/expense_add";
 
 class Setup extends Component {
   render() {
-    return <ExpenseList />;
+    return <ExpenseAdd />;
   }
 }
 
